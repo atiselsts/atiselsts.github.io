@@ -16,6 +16,20 @@
 
 "use strict";
 
+if (typeof Array.prototype.includes != 'function') {
+    Array.prototype.includes = function(x)
+    {
+        return Array(this).indexOf(x) !== -1;
+    };
+}
+
+if (typeof String.prototype.includes != 'function') {
+    String.prototype.includes = function(x)
+    {
+        return String(this).indexOf(x) !== -1;
+    };
+}
+
 if(typeof(String.prototype.trim) === "undefined") {
     String.prototype.trim = function() 
     {
