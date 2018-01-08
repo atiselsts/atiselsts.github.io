@@ -16,12 +16,12 @@
 
 body {
     /*  font: 13px "Helvetica" !important; */
-  font: 16px "Helvetica" !important;
+  font: 14px "Helvetica" !important;
   padding-top: 100px;
   background: url("pw_maze_white.png");
 }
 h5 {
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
 #dropTarget {
     position: absolute;
@@ -42,7 +42,7 @@ h5 {
 }
 
 a.btn {
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
 
 div.btn-group, a.btn {
@@ -726,10 +726,10 @@ div.node-info {
     width: 260px !important;
 }
 .dropdown-menu > li > a {
-     padding-left: 28px ;
-     text-indent: -8px ;
-     white-space: normal !important;
-     font: 16px "Helvetica" !important;
+    padding-left: 28px ;
+    text-indent: -8px ;
+    white-space: normal !important;
+    font: 14px "Helvetica" !important;
 }
 
 .dropdown-menu > li > a .inactive {
@@ -1098,5 +1098,5 @@ a.red-ui-popup-close {
 }
 
 .li {
-    font: 16px "Helvetica" !important;
+    font: 14px "Helvetica" !important;
 }
