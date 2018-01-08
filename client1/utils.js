@@ -16,17 +16,14 @@
 
 "use strict";
 
-if (typeof Array.prototype.includes != 'function') {
-    Array.prototype.includes = function(x)
-    {
-        return Array(this).indexOf(x) !== -1;
-    };
+function includes(a, o) {
+    return a.indexOf(o) !== -1;
 }
 
 if (typeof String.prototype.includes != 'function') {
     String.prototype.includes = function(x)
     {
-        return String(this).indexOf(x) !== -1;
+        return this.indexOf(x) !== -1;
     };
 }
 
@@ -36,6 +33,7 @@ if(typeof(String.prototype.trim) === "undefined") {
         return String(this).replace(/^\s+|\s+$/g, '');
     };
 }
+
 if (typeof String.prototype.startsWith != 'function') {
   String.prototype.startsWith = function(str) {
       return this.indexOf(str) == 0;

@@ -160,7 +160,10 @@ RED.achievements = function() {
         var stats = wearableCoverageStats();
         var inBedroom = false;
         if (stats.rooms.length) {
-            inBedroom = stats.presentRooms.includes("guest bedroom") || stats.presentRooms.includes("master bedroom");
+            if (stats.presentRooms.indexOf("guest bedroom") !== -1
+                || stats.presentRooms.indexOf("master bedroom") !== -1) {
+                inBedroom = true;
+            }
         }
         return stats.hasWearable && inBedroom;
     }

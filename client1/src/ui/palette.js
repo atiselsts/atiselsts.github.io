@@ -43,7 +43,7 @@ RED.palette = function() {
             d.type = nt;
 
             var label = def.label();
-            if (label.indexOf(" ") !== -1) {
+            if (label.includes(" ")) {
                 var s = label.split(" ");
 
                 var x = calculateTextStart(s[0]);

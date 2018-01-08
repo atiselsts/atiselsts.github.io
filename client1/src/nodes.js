@@ -69,6 +69,9 @@ RED.nodes = function() {
     }
 
     function calculateCostForNode(n) {
+        if (!n._def) {
+            return 0;
+        }
         var cost = n._def.defaults.cost;
         if (cost !== undefined) {
             cost = cost.value;
@@ -123,12 +126,12 @@ RED.nodes = function() {
         var anyProtocol = false;
         var rightDirection = false;
         s._def.capabilities.forEach(function(key) {
-            if (d._def.capabilities.includes(key)) {
+            if (includes(d._def.capabilities, key)) {
 
                 anyProtocol = true;
 
-                if (!(s._def.capabilitiesOnlyInput && s._def.capabilitiesOnlyInput.includes(key)
-                      || d._def.capabilitiesOnlyOutput && d._def.capabilitiesOnlyOutput.includes(key))) {
+                if (!(s._def.capabilitiesOnlyInput && includes(s._def.capabilitiesOnlyInput, key)
+                      || d._def.capabilitiesOnlyOutput && includes(d._def.capabilitiesOnlyOutput, key))) {
                     rightDirection = true;
                 }
             }
@@ -147,12 +150,12 @@ RED.nodes = function() {
     }
 
     function canBeLinkedWith(s, d, protocol, checkDistance) {
-        if (!s._def.capabilities.includes(protocol)
-            || !d._def.capabilities.includes(protocol)) {
+        if (!includes(s._def.capabilities, protocol)
+            || !includes(d._def.capabilities, protocol)) {
             return false;
         }
-        if (s._def.capabilitiesOnlyInput && s._def.capabilitiesOnlyInput.includes(protocol)
-            || d._def.capabilitiesOnlyOutput && d._def.capabilitiesOnlyOutput.includes(protocol)) {
+        if (s._def.capabilitiesOnlyInput && includes(s._def.capabilitiesOnlyInput, protocol)
+            || d._def.capabilitiesOnlyOutput && includes(d._def.capabilitiesOnlyOutput, protocol)) {
             return false;
         }
         if (checkDistance) {

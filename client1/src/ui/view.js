@@ -1450,7 +1450,7 @@ RED.view = function() {
                 thisNode.selectAll('text.node_label').html(function(d,i){
                     var r;
                     var label = getValue(d._def.label, d);
-                    if (label.indexOf(" ") !== -1) {
+                    if (label.includes(" ")) {
                         var s = label.split(" ");
                         var x = calculateTextStart(d, s[0]);
                         r = '<tspan x="' + x + '" dy=".6em" text-anchor="middle">' + s[0] + '</tspan>\n';
@@ -1462,7 +1462,7 @@ RED.view = function() {
                 })
                     .attr('x', function(d) {return calculateTextStart(d)})
                     .attr('y', function(d) {
-                        return getValue(d._def.label, d).indexOf(" ") !== -1 ? 8 : 22;
+                        return getValue(d._def.label, d).includes(" ") ? 8 : 22;
                     })
                     .attr('class',function(d){
                         return 'node_label'+
