@@ -76,13 +76,9 @@ RED.game = function() {
         while (queue.length) {
             var node = queue.shift();
             node.isReachable = true;
-            // add all nodes linking to this one that have not been seen yet
-            var connectedLinks = links.filter(function(l) { return (l.source === node) || (l.target === node); });
+            // add all nodes linking to this one as target, and haven't been seen yet
+            var connectedLinks = links.filter(function(l) { return l.target === node; });
             connectedLinks.forEach(function (l) {
-                if (l.source === node) {
-                    // wrong direction
-                    return;
-                }
                 if (l.source.isReachable === false) {
                     // add this new node to the queue
                     queue.push(l.source);

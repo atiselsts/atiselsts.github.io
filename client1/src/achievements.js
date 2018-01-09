@@ -146,9 +146,37 @@ RED.achievements = function() {
         return c >= 3;
     }
 
+    function isMeshNetwork() {
+        var ok = false;
+        RED.nodes.eachNode(function (n) {
+            if (n._def.modality === "gateway") {
+                var connectedLinks = RED.nodes.links.filter(function(l) { return l.target === n; });
+                connectedLinks.forEach(function (l) {
+                    if (l.source._def.modality === "gateway") {
+                        ok = true;
+                    }
+                });
+            }
+        });
+        return ok;
+    }
+
     function wholeEmbeddedNetwork(protocol) {
-        // TODO!
-        return false;
+        if (!isMeshNetwork()) {
+            return false;
+        }
+
+        if (!anyCoverage("environmental", true)) return false;
+        if (!anyCoverage("wearable", false)) return false;
+
+        var numLinks = {TSCH: 0, BLE: 0};
+        RED.nodes.links.forEach(function (l) {
+            numLinks[l.protocol] += 1;
+        });
+
+        // true if all links are with the specific protocol
+        // console.log("Num links per protocol = " + numLinks[protocol] + " total = " + (numLinks.TSCH + numLinks.BLE));
+        return numLinks[protocol] === numLinks.TSCH + numLinks.BLE;
     }
 
     function systemMonitoring() {
@@ -205,6 +233,13 @@ RED.achievements = function() {
     });
 
     achievements.push({
+        name: "Mesh network",
+        explanation : "You have connected two forwarding gateways with each another, forming a wireless mesh network",
+        predicate: isMeshNetwork
+    });
+
+
+    achievements.push({
         name: "Full environmental sensing",
         explanation : "You have fully covered the house with environmental sensors",
         predicate: fullEnvironmentalCoverage
@@ -229,7 +264,7 @@ RED.achievements = function() {
 
     achievements.push({
         name: "Sleep monitoring",
-        explanation : "You have installed a Wristband Sensor and a Forwarding Gateway in a bedroom. This will allow to monitor the activity levels during sleep.",
+        explanation : "You have installed a Wristband Sensor and a Forwarding Gateway in a bedroom. This will allow to monitor the activity levels during sleep",
         predicate:  sleepMonitoring
     });
 
@@ -258,14 +293,14 @@ RED.achievements = function() {
 
     achievements.push({
         name: "Indoor localization",
-        explanation : "You have installed Forwading Gateways in sufficiently many rooms. This will allow to accurately track the location of wristband sensor users. From healthcare perspecitive, increasingly stationary lifestyle may signal detoriation",
+        explanation : "You have installed Forwarding Gateways in sufficiently many rooms. This will allow to accurately track the location of the users of wristband sensors. From healthcare perspective, increasingly stationary lifestyle may signal deterioration",
         predicate:  indoorLocalization,
         isHidden: true
     });
 
     achievements.push({
         name: "Water monitoring: kitchen",
-        explanation : "You have installed a Water Sensor in kitchen. Food preparation and water concumption habits are highly correlated with long-term health outcomes",
+        explanation : "You have installed a Water Sensor in kitchen. Food preparation and water consumption habits are highly correlated with long-term health outcomes",
         predicate:  function() { return isWaterSensor("kitchen")},
         isHidden: true
     });
@@ -286,7 +321,7 @@ RED.achievements = function() {
 
     // ------------------------------------------------------------------
 
-    // get info about achievements from the local storage in the web browaser (persistent info)
+    // get info about achievements from the local storage in the web browser (persistent info)
     var doneAchievements;
 
     var daString = localStorage.getItem("doneAchievements") || "[]";

@@ -1868,6 +1868,8 @@ RED.view = function() {
     }
 
     $('#btn-show-intro').click(showIntro);
+    $('#btn-show-intro-main').click(showIntro);
+
     $( "#dialog-intro1-button" ).click(function() {
         var dialog = $('#node-dialog-intro2');
         dialog.modal();

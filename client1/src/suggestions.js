@@ -73,11 +73,30 @@ RED.suggestions = function() {
         return has;
     }
 
+    function hasMultipleUnconnectedGateways() {
+        if (numberOfSensors("gateway") < 2) {
+            return false;
+        }
+        var result = true;
+        RED.nodes.eachNode(function (node) {
+            if (node._def.modality === "gateway") {
+                var connectedLinks = RED.nodes.links.filter(function(l) { return l.target === node; });
+                connectedLinks.forEach(function (l) {
+                    if (l.source._def.modality === "gateway") {
+                        // has a link with different gateway
+                        result = false;
+                    }
+                });
+            }
+        });
+        return result;
+    }
+
     // -----------------------------------------------------------------------
 
     suggestions.push({
         predicate : hasNodes,
-        text : "Try dragging some nodes from the palette to the house floorplan to get started"
+        text : "Try dragging some nodes from the palette to the house floor plan to get started"
     });
 
     suggestions.push({
@@ -102,7 +121,7 @@ RED.suggestions = function() {
 
     suggestions.push({
         predicate : function() { return hasSensors("wearable") },
-        text : "A smart home system needs <strong>a wristband sensor</strong> (a \"wearable\") to capture participant activities and localize participants in the house"
+        text : "A smart home system needs <strong>a wristband sensor</strong> (a \"wearable\") to capture participant activity and location in the house in every moment"
     });
 
     suggestions.push({
@@ -132,7 +151,7 @@ RED.suggestions = function() {
 
     suggestions.push({
         predicate : function() { return sensingInRoom("video", "hall-and-stairs") },
-        text : "A connected video sensor in the hall helps to detect movement quality, especially about participants moving up and down the stairs. This is useful to monitor the recovery of patients after hip or knee operations and diagnose the severity of problems such as Parkinson's disease"
+        text : "A connected video sensor in the hall helps to detect movement quality, especially about participants moving up and down the stairs. This is useful to monitor the recovery of patients after hip or knee operations and diagnose the severity of chronic health conditions such as Parkinson's disease"
     });
 
     suggestions.push({
@@ -142,15 +161,21 @@ RED.suggestions = function() {
 
     suggestions.push({
         predicate : function() { return sensingInRoom("video", "living room") },
-        text : "A connected video sensor in the living room records a lot of infromation about activities, such as the time spent watching TV"
+        text : "A connected video sensor in the living room records a lot of information about activities, such as the time spent watching TV"
     });
 
     suggestions.push({
         predicate : function() {
             return sensingInRoom("gateway", "guest bedroom") || sensingInRoom("gateway", "master bedroom")
         },
-        text : "A connected Forwarding Gateway in the bedroom is useful to record information about sleep quality during night, assuming a wristband node is worn by the particant sleeping there. Bad sleep quality is correlated and may increase the risk of many medical conditions, including depressing and hypertension"
+        text : "A connected Forwarding Gateway in the bedroom is useful to record information about sleep quality during night, assuming a wristband node is worn by the participant sleeping there. Bad sleep quality is correlated with many medical conditions, and may increase the risk of depressing and hypertension"
     });
+
+    suggestions.push({
+        predicate : hasMultipleUnconnectedGateways,
+        text : "There are multiple Forwarding Gateways, but they are not connected in a mesh (that is, with each another). Connecting them in a mesh will allow to cover more areas in the house with Wearable Sensing and Environmental Sensing. The Forwarding gateways are going forward data from environmental sensors and wristband sensors to the Home Gateway"
+    });
+
 
     // -----------------------------------------------------------------------
 
@@ -220,37 +245,33 @@ RED.suggestions = function() {
 
     problems.push({
         predicate : function() { return hasUnreachableSensors("gateway") },
-        text : "There is a disconnected forwarding gateway. All forwarding gateways need to be able to communicate with the Home Gateway either directly or, for most of them, through another forwarding gateway"
+        text : "There is a disconnected Forwarding Gateway. All Forwarding Gateways need to be able to communicate with the Home Gateway either directly or, for most of them, through another Forwarding Gateway"
     });
 
     problems.push({
         predicate : function() { return hasDisconnectedSensors("environmental") },
-        text : "There is a disconnected environmental sensor. All environmental sensors need to be able to communicate with the Home Gateway through forwarding gateways"
+        text : "There is a disconnected environmental sensor. All environmental sensors need to be able to communicate with the Home Gateway through a Forwarding Gateway"
     });
 
     problems.push({
         predicate : function() { return hasUnreachableSensors("environmental") },
-        text : "There is an unreachable environmental sensor. All environmental sensors need to be able to communicate with the Home Gateway through a forwarding gateway"
+        text : "There is an unreachable environmental sensor. All environmental sensors need to be able to communicate with the Home Gateway through a Forwarding Gateway"
     });
 
     problems.push({
         predicate : function() { return hasDisconnectedSensors("video") },
-        text : "There is a disconnected video camera. Each video camera needs to be connected to a video gateway with a USB cable"
+        text : "There is a disconnected video camera. Each video camera needs to be connected to a Video Gateway with a USB cable"
     });
 
     problems.push({
         predicate : function() { return hasUnreachableSensors("video") },
-        text : "There is an unreachable video camera. All video cameras need to be able to communicate with the Home Gateway through a video gateway"
+        text : "There is an unreachable video camera. All video cameras need to be able to communicate with the Home Gateway through a Video Gateway"
     });
 
     problems.push({
         predicate : function() { return numberOfSensors("video") > 3 },
         text : "More than three video cameras <i>may</i> make you run out of budget too soon if you're not careful"
     });
-
-    // TODO: video camera directly to the home gateway
-
-    // TODO: wrong protocols?
 
     // -----------------------------------------------------------------------
 
@@ -291,7 +312,7 @@ RED.suggestions = function() {
         }
 
         return { type : "Suggestion",
-                 text : 'Looks like you\'re all done with the "basic" stuff. Keep up the good work!<br><br>Some ideas to try out:<ul><li> What\'s the minimal number of devices needed to achieve full coverage?<li> If you\'re using BLE for communication, try switcing the network to TSCH and vice versa.<li>Indoor localization relies on Forwarding Gateways: the more, the better.<li> Leave <a href="#" onclick="$(\'#node-dialog-about\').modal()">feedback via social media or email!</a></ul>'
+                 text : 'Looks like you\'re all done with the "basic" stuff. Keep up the good work!<br><br>Some ideas to try out:<ul><li> What\'s the minimal number of devices needed to achieve full coverage?<li> If you\'re using BLE for communication, try switching the network to TSCH and vice versa.<li>Indoor localization relies on Forwarding Gateways: the more, the better (but they also make the system more expensive).<li> Leave <a href="#" onclick="$(\'#node-dialog-about\').modal()">feedback via social media or email!</a></ul>'
                }
     }
     

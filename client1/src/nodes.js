@@ -172,7 +172,7 @@ RED.nodes = function() {
         return {
             titleless: true,
             defaults: {
-                protocol: {value:"TSCH"},
+                protocol: {value:"TSCH"}
             },
             validate: function() {
                 //console.log("validate " + JSON.stringify(this));
@@ -670,7 +670,11 @@ RED.nodes = function() {
         var x = link.target.x - link.source.x;
         var y = link.target.y - link.source.y;
         var distance = Math.sqrt(x * x + y * y);
-        r["length"] = Math.round(distance / RED.options.getOption("distanceMetersToPixels"));
+        r.length = Math.round(distance / RED.options.getOption("distanceMetersToPixels"));
+        var props = RED.options.getProtocolByName(link.protocol);
+        if (props && props.mode) {
+            r.mode = props.mode;
+        }
         return r;
     }
 

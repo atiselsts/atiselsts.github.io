@@ -96,8 +96,6 @@ RED.sidebar.info = function() {
         var table = '<table class="node-info"><tbody>';
 
         table += "<tr><td>Type</td><td>&nbsp;link</td></tr>";
-        // table += "<tr><td>Source ID</td><td>&nbsp;"+link.source.id+"</td></tr>";
-        // table += "<tr><td>Destination ID</td><td>&nbsp;"+link.target.id+"</td></tr>";
         table += '<tr class="blank"><td colspan="2">&nbsp;Properties</td></tr>';
         var prop = RED.nodes.getLinkProperties(link);
         for (var n in prop) {
@@ -128,6 +126,9 @@ RED.sidebar.info = function() {
             table += "<tr><td>&nbsp;"+n+"</td><td>"+val+"</td></tr>";
         }
         table += "</tbody></table><br/>";
+
+        var props = RED.options.getProtocolByName(link.protocol);
+        table += '<div class="node-help">' + (props && props.description ? props.description : "") + "</div>";
         $("#tab-info").html(table);
     }
 
