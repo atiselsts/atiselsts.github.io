@@ -1456,7 +1456,7 @@ RED.view = function() {
                     });                    
                 }
 
-                thisNode.selectAll('text.node_label').html(function(d,i){
+                thisNode.selectAll('text.node_label').text(function(d,i){
                     var label = getValue(d._def.label, d);
                     if (label.includes(" ")) {
                         return label.split(" ")[0];
@@ -1467,7 +1467,7 @@ RED.view = function() {
                         return getValue(d._def.label, d).includes(" ") ? 12 : 20;
                     });
 
-                thisNode.selectAll('text.node_label2').html(function(d,i){
+                thisNode.selectAll('text.node_label2').text(function(d,i){
                     var label = getValue(d._def.label, d);
                     if (label.includes(" ")) {
                         return label.split(" ")[1];
