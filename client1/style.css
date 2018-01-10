@@ -267,8 +267,6 @@ div.elem-mainmenu {
 .palette_label {
     position: absolute;
     font-weight: bold;
-/*    top: 10px;
-    left: 40px; */
 }
 .palette_node {
    cursor:move;
@@ -280,7 +278,7 @@ div.elem-mainmenu {
    background-position: 5% 50% !important;
    background-repeat: no-repeat;
    width: 174px;
-   height: 42px;
+   height: 40px;
    background-size: contain;
    position: relative;
 }
@@ -421,7 +419,19 @@ div.elem-mainmenu {
 .node_label {
    stroke-width: 0;
    fill: #333;
-/*   font-size: 14px; */
+   pointer-events: none;
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   font-weight: bold; /* Atis */
+}
+
+.node_label2 {
+   stroke-width: 0;
+   fill: #333;
    pointer-events: none;
    -webkit-touch-callout: none;
    -webkit-user-select: none;

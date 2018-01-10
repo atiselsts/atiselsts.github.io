@@ -47,7 +47,7 @@ RED.palette = function() {
                 var s = label.split(" ");
 
                 var x = calculateTextStart(s[0]);
-                var y = 0;
+                var y = 2;
                 d.innerHTML = '<div class="palette_label" style="left:' + x +'px;top:' + y + 'px">'+s[0]+"</div>";
 
                 x = calculateTextStart(s[1]);
@@ -55,7 +55,7 @@ RED.palette = function() {
                 d.innerHTML += '<div class="palette_label" style="left:' + x +'px;top:' + y + 'px">'+s[1]+"</div>";
             } else {
                 var x = calculateTextStart(label);
-                d.innerHTML = '<div class="palette_label" style="left:' + x +'px;top:9px">'+label+"</div>";
+                d.innerHTML = '<div class="palette_label" style="left:' + x +'px;top:10px">'+label+"</div>";
             }
             d.className="palette_node";
             if (def.icon) {

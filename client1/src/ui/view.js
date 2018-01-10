@@ -1267,7 +1267,16 @@ RED.view = function() {
                 node.append('svg:text')
                     .attr('class','node_label')
                     .attr('x', function(d) {return calculateTextStart(d)})
-                    .attr('y', 22)
+                    .attr('y', function(d) {
+                        return getValue(d._def.label, d).includes(" ") ? 12 : 20;
+                    })
+                    .attr('dy', '.35em')
+                    .attr('text-anchor','middle');
+
+                node.append('svg:text')
+                    .attr('class','node_label2')
+                    .attr('x', function(d) {return calculateTextStart(d)})
+                    .attr('y', "30")
                     .attr('dy', '.35em')
                     .attr('text-anchor','middle');
 
@@ -1279,6 +1288,7 @@ RED.view = function() {
                         .attr("xlink:href","icons/"+d._def.icon)
                         .attr("class","node_icon")
                         .attr("x",2)
+                        .attr("y",6)
                         .attr("width","32")
                         .attr("height","32");
 
@@ -1446,75 +1456,24 @@ RED.view = function() {
                     });                    
                 }
 
-
                 thisNode.selectAll('text.node_label').html(function(d,i){
-                    var r;
                     var label = getValue(d._def.label, d);
                     if (label.includes(" ")) {
-                        var s = label.split(" ");
-                        var x = calculateTextStart(d, s[0]);
-                        r = '<tspan x="' + x + '" dy=".6em" text-anchor="middle">' + s[0] + '</tspan>\n';
-                        r += '<tspan x="' + x + '" dy="1.2em" text-anchor="middle">' + s[1] + '</tspan>';
-                    } else {
-                        r = label;
+                        return label.split(" ")[0];
                     }
-                    return r;
+                    return label;
                 })
-                    .attr('x', function(d) {return calculateTextStart(d)})
                     .attr('y', function(d) {
-                        return getValue(d._def.label, d).includes(" ") ? 8 : 22;
-                    })
-                    .attr('class',function(d){
-                        return 'node_label'+
-                            (d._def.align?' node_label_'+d._def.align:'')+
-                            " " + getValue(d._def.labelStyle, d);
-                    });
-                //                    thisNode.selectAll(".node_tools")
-                //                        .attr("x",function(d){return d.w-35;})
-                //                        .attr("y",function(d){return d.h-20;});
-
-/*                thisNode.selectAll(".node_changed")
-                    .attr("x",function(d){return d.w-10})
-                    .classed("hidden",function(d) {
-                        return !d.changed;
+                        return getValue(d._def.label, d).includes(" ") ? 12 : 20;
                     });
 
-                thisNode.selectAll(".node_error")
-                    .attr("x",function(d){return d.w-10-(d.changed?13:0)})
-                    .classed("hidden",function(d) {
-                        return d.valid;
-                    });
-*/
-
-                $('.property_label', this).remove(); // remove old
-                if (showProperties) {
-                    var yPos = d._def.titleless ? 0 : 32;
-                    for (var i in props) {
-                        yPos += 20;
-                        thisNode.append("svg:text")
-                            .attr('x',14)
-                            .attr('y', yPos)
-                            .attr('class', "property_label")
-                            .text((props[i].name ? (props[i].name + ": ") : "") + props[i].value);
+                thisNode.selectAll('text.node_label2').html(function(d,i){
+                    var label = getValue(d._def.label, d);
+                    if (label.includes(" ")) {
+                        return label.split(" ")[1];
                     }
-
-                    $('.node_underline_border', this).remove();
-                    if (props.length) {
-                        thisNode.selectAll(".node_icon_group")
-                            .append("path")
-                            .attr("d",function(d) { return "M 0 32 l " + d.w + " 0" })
-                            .attr("class","node_underline_border")
-                            .attr("stroke","#000")
-                            .attr("stroke-opacity","0.8");
-                        thisNode.selectAll(".node_icon_group")
-                            .selectAll(".node_icon")
-                            .attr("y",2);
-                    } else {
-                        thisNode.selectAll(".node_icon_group")
-                            .selectAll(".node_icon")
-                            .attr("y",6);
-                    }
-                }
+                    return "";
+                });
             }
         });
 
