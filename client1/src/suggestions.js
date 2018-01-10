@@ -172,7 +172,7 @@ RED.suggestions = function() {
     });
 
     suggestions.push({
-        predicate : hasMultipleUnconnectedGateways,
+        predicate : function() { return !hasMultipleUnconnectedGateways(); },
         text : "There are multiple Forwarding Gateways, but they are not connected in a mesh (that is, with each another). Connecting them in a mesh will allow to cover more areas in the house with Wearable Sensing and Environmental Sensing. The Forwarding gateways are going forward data from environmental sensors and wristband sensors to the Home Gateway"
     });
 
