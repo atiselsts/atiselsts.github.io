@@ -703,10 +703,6 @@ RED.view = function() {
                 x /= scaleFactor;
                 y /= scaleFactor;
 
-                //
-                // TODO: if the node is the bin region, do not do anything!
-                //
-
                 var nn = {
                     id:getRandomID(),
                     x:x,
@@ -714,6 +710,11 @@ RED.view = function() {
                     w:+options.taskWidth,
                     z:active_ws
                 };
+
+                // If the node is the bin region, don't do anything
+                if (nodeInBinRegion(nn)) {
+                    return;
+                }
 
                 nn.type = selected_tool;
                 nn._def = RED.nodes.getType(nn.type);
@@ -1184,7 +1185,7 @@ RED.view = function() {
     }
 
     function nodeInBinRegion(node) {
-        return node.x >= 1100 && node.x <= 1420 && node.y >= 20 && node.y <= 320;
+        return node.x >= 1000 && node.x <= 1320 && node.y >= 20 && node.y <= 320;
     }
 
     function checkWearablePos(node) {
