@@ -1001,17 +1001,17 @@ RED.view = function() {
             });
             if (!existingLink) {
                 var canBeLinked = RED.nodes.canBeLinked(src, dst)
-                if (canBeLinked > 0) {
+                if (canBeLinked.ok) {
                     var link = {source: src, sourcePort:src_port, target: dst, targetPort:dst_port};
                     RED.nodes.addLink(link);
                     // added in order to show link edit dialog immediately after adding the link
                     drag_line.attr("class", "drag_line_hidden");
                     setSelectedLink(link);
                     RED.editor.editLink(link);
-                } else if (canBeLinked == 0) {
-                    RED.notify("These nodes cannot be linked directly: they do not share any common communication protocols", "error");
                 } else {
-                    RED.notify("These nodes cannot be linked in this direction", "error");
+                    RED.notify(canBeLinked.error ?
+                               canBeLinked.error :
+                               "These nodes cannot be linked", "error");
                 }
             }
             setSelectedLink(null);
@@ -1411,7 +1411,7 @@ RED.view = function() {
                             && mousedown_port_type !== 0
                             && portsNode !== mousedown_node
                             // can be linked from  this (port's) node to mousedown_node
-                            && RED.nodes.canBeLinked(portsNode, mousedown_node) > 0;
+                            && RED.nodes.canBeLinked(portsNode, mousedown_node).ok;
                         port.classed("port_connectable", canConnect);
                     });
                 }
@@ -1452,7 +1452,7 @@ RED.view = function() {
                             && mousedown_port_type !== 1
                             && portsNode !== mousedown_node
                             // can be linked from mousedown_node to this (port's) node
-                            && RED.nodes.canBeLinked(mousedown_node, portsNode) > 0;
+                            && RED.nodes.canBeLinked(mousedown_node, portsNode).ok;
                         port.classed("port_connectable", canConnect);
                     });                    
                 }

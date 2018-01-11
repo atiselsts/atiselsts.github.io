@@ -112,7 +112,7 @@ var RED = function() {
         else {
             // save locally
             localStorage.setItem("currentFlow", JSON.stringify(nns));
-            RED.notify("Successfully saved in local storage","success");
+            RED.notify("Successfully saved","success");
             RED.nodes.eachNode(function(node) {
                 if (node.changed) {
                     node.dirty = true;

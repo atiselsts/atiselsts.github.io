@@ -117,14 +117,27 @@ RED.nodes = function() {
         n.status = {};
     }
 
-    // Two nodes can be linked iff they share some communication protocols and in the right direction
-    // Returns:
-    //   0 if no common protocols
-    //  -1 if common protocols, but wrong direction
-    //   1 if all ok
+    function getDistance(s, d) {
+        var x = s.x + NODE_WIDTH - d.x;
+        var y = s.y - d.y;
+
+        return Math.sqrt(x * x + y * y);
+    }
+
+    //
+    // Two nodes can be linked iff:
+    // - they share a common communication protocols;
+    // - this protocol works in that direction (e.g. USB host vs. client);
+    // - they are not too far away.
+    //
     function canBeLinked(s, d) {
+        var result = {ok: false , error: ""};
         var anyProtocol = false;
         var rightDirection = false;
+        var distanceOk = false;
+
+        var distance = getDistance(s, d);
+
         s._def.capabilities.forEach(function(key) {
             if (includes(d._def.capabilities, key)) {
 
@@ -133,20 +146,26 @@ RED.nodes = function() {
                 if (!(s._def.capabilitiesOnlyInput && includes(s._def.capabilitiesOnlyInput, key)
                       || d._def.capabilitiesOnlyOutput && includes(d._def.capabilitiesOnlyOutput, key))) {
                     rightDirection = true;
+
+                    var p = RED.options.getProtocolByName(key);
+                    if (p && p.range >= distance) {
+                        distanceOk = true;
+                    }
                 }
             }
         });
-        if (anyProtocol) {
-            return rightDirection ? 1 : -1;
+
+        result.ok = anyProtocol && rightDirection && distanceOk;
+        if (!result.ok) {
+            if (!anyProtocol) {
+                result.error = "These nodes cannot be linked directly: they do not share any common communication protocols";
+            } else if (!rightDirection) {
+                result.error = "These nodes cannot be linked in this direction";
+            } else {
+                result.error = "These nodes cannot be linked: they are too far away";
+            }
         }
-        return 0;
-    }
-
-    function getDistance(s, d) {
-        var x = s.x + NODE_WIDTH - d.x;
-        var y = s.y - d.y;
-
-        return Math.sqrt(x * x + y * y);
+        return result;
     }
 
     function canBeLinkedWith(s, d, protocol, checkDistance) {
@@ -667,9 +686,7 @@ RED.nodes = function() {
             var val = link[n]||"";
             r[n] = val;
         }
-        var x = link.target.x - link.source.x;
-        var y = link.target.y - link.source.y;
-        var distance = Math.sqrt(x * x + y * y);
+        var distance = getDistance(link.source, link.target);
         r.length = Math.round(distance / RED.options.getOption("distanceMetersToPixels"));
         var props = RED.options.getProtocolByName(link.protocol);
         if (props && props.mode) {

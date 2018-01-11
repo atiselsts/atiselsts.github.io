@@ -68,7 +68,7 @@ RED.game = function() {
         var queue = [];
         RED.nodes.eachNode(function (node) {
             node.isReachable = false;
-            if (node._def.isHomeGateway === true) {
+            if (node._def.isHomeGateway) {
                 queue.push(node);
             }
         });
@@ -77,11 +77,17 @@ RED.game = function() {
             var node = queue.shift();
             node.isReachable = true;
             // add all nodes linking to this one as target, and haven't been seen yet
-            var connectedLinks = links.filter(function(l) { return l.target === node; });
+            var connectedLinks = links.filter(function(l) {
+                // Normally pick up only nodes that input data in the current one;
+                // but allow the information to flow both ways between SHG and whateve they're connected to
+                return l.target === node || (node._def.isHomeGateway && l.source === node);
+            });
+
             connectedLinks.forEach(function (l) {
-                if (l.source.isReachable === false) {
+                var other = (node === l.target ? l.source : l.target);
+                if (other.isReachable === false) {
                     // add this new node to the queue
-                    queue.push(l.source);
+                    queue.push(other);
                 }
             });
         }
