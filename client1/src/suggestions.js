@@ -151,7 +151,7 @@ RED.suggestions = function() {
 
     suggestions.push({
         predicate : function() { return sensingInRoom("video", "hall-and-stairs") },
-        text : "A connected video sensor in the hall helps to detect movement quality, especially about participants moving up and down the stairs. This is useful to monitor the recovery of patients after hip or knee operations and diagnose the severity of chronic health conditions such as Parkinson's disease"
+        text : "A connected video sensor in the hall helps to detect movement quality, especially about participants moving up and down the stairs. This is useful to, for example, monitor the recovery of patients after hip or knee operations, and diagnose the severity of chronic health conditions such as Parkinson's disease"
     });
 
     suggestions.push({
