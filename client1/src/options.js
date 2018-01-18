@@ -39,7 +39,7 @@ RED.options = function() {
             color: "#388e3c",
             range : 10 * options.distanceMetersToPixels,
             mode: "wireless",
-            description: "TSCH is a network protocol for low-power wireless networks.<br/><br/>TSCH is widely used in industrial applications due to its higher reliability over competing wireless standards. It offers longer range and higher practical throughput than BLE version 4, but BLE 5 can be optimized to be either faster or with longer range. TSCH uses 2.4 GHz frequency band, and hops over multiple frequencies to achieve reliable wireless links even in home environment with signal fading and interference from other wireless devices."
+            description: "TSCH is a network protocol for low-power wireless networks.<br/><br/>TSCH is widely used in industrial applications due to its higher reliability over competing wireless standards. It offers longer range and higher practical throughput than BLE version 4, but BLE 5 can be optimized to be either faster or with longer range. TSCH uses 2.4 GHz frequency band, and hops over multiple frequencies. It can achieve reliable wireless links even in home environment with signal fading and interference from other wireless devices."
         },
         "BLE" : {
             nm: "BLE",

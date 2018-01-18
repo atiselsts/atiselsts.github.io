@@ -96,7 +96,7 @@ RED.suggestions = function() {
 
     suggestions.push({
         predicate : hasNodes,
-        text : "Try dragging some nodes from the palette to the house floor plan to get started"
+        text : "Try dragging some nodes from the palette (on the left side) to the house plan to get started"
     });
 
     suggestions.push({
@@ -280,6 +280,10 @@ RED.suggestions = function() {
         if (!RED.game.getIsStarted()) {
             // game not started yet
             return { type: "Suggestion", text : "Wait for the game to load.." }; // sic: this needs *two* dots!
+        }
+
+        if (!suggestions[0].predicate()) {
+            return suggestions[0];
         }
 
         if (Math.random() < 0.5) {

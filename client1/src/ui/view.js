@@ -1824,7 +1824,9 @@ RED.view = function() {
 
     function showIntro() {
         var dialog = $('#node-dialog-intro1');
-        dialog.modal();
+        dialog.modal().css({
+            width: '600'
+        });
     }
 
     $('#btn-show-intro').click(showIntro);
@@ -1832,7 +1834,9 @@ RED.view = function() {
 
     $( "#dialog-intro1-button" ).click(function() {
         var dialog = $('#node-dialog-intro2');
-        dialog.modal();
+        dialog.modal().css({
+            width: '600'
+        });
     });
 
     $('#btn-show-about').click(function() {

@@ -108,7 +108,7 @@ RED.game = function() {
                 showAchievement(a);
             }
         } else {
-                //console.log(a.name + " is NOT satisfied!");
+            //console.log(a.name + " is NOT satisfied!");
         }
     }
 
