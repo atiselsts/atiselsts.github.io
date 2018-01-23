@@ -99,6 +99,14 @@ RED.palette = function() {
                     var help = '<div class="node-help">'+($("script[data-help-name|='"+d.type+"']").html()||"")+"</div>";
                     $("#tab-info").html(help);
             });
+            // also show the info if the mouse just is hovering over
+            $(d).mouseover(function() {
+                    var help = '<div class="node-help">'+($("script[data-help-name|='"+d.type+"']").html()||"")+"</div>";
+                    $("#tab-info").html(help);
+            });
+            $(d).mouseout(function() {
+                RED.sidebar.info.clear();
+            });
             $(d).draggable({
                 helper: 'clone',
                 appendTo: 'body',

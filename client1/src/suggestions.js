@@ -96,12 +96,12 @@ RED.suggestions = function() {
 
     suggestions.push({
         predicate : hasNodes,
-        text : "Try dragging some nodes from the palette (on the left side) to the house plan to get started"
+        text : "Try dragging some devices from the palette (on the left side) to the house plan to get started"
     });
 
     suggestions.push({
         predicate : hasLinks,
-        text : "Join the nodes together with links to get started.\nA link must connect an <strong>output port</strong> (right side) of a node with an <strong>input port</strong> (left side) of another node"
+        text : "Join the devices together with links to get started.\nA link must connect an <strong>output port</strong> (right side) of a device with an <strong>input port</strong> (left side) of another device"
     });
 
     suggestions.push({
@@ -156,7 +156,7 @@ RED.suggestions = function() {
 
     suggestions.push({
         predicate : function() { return sensingInRoom("video", "kitchen") },
-        text : "A connected video sensor in the kitchen helps to detect cooking-related activities. This is useful to diagnose the complexity and duration of means, which is useful for many medical applications, including monitoring and early diagnosis of Alzheimer's disease"
+        text : "A connected video sensor in the kitchen helps to detect cooking-related activities. This is useful to diagnose the \"complexity\" and duration of meals, which is useful for many medical applications, including monitoring and early diagnosis of Alzheimer's disease"
     });
 
     suggestions.push({
@@ -168,7 +168,7 @@ RED.suggestions = function() {
         predicate : function() {
             return sensingInRoom("gateway", "guest bedroom") || sensingInRoom("gateway", "master bedroom")
         },
-        text : "A connected Forwarding Gateway in the bedroom is useful to record information about sleep quality during night, assuming a wristband node is worn by the participant sleeping there. Bad sleep quality is correlated with many medical conditions, and may increase the risk of depressing and hypertension"
+        text : "A connected Forwarding Gateway in the bedroom is useful to record information about sleep quality during night, assuming a wristband device is worn by the participant sleeping there. Bad sleep quality is correlated with many medical conditions, and may increase the risk of depressing and hypertension"
     });
 
     suggestions.push({
@@ -282,8 +282,14 @@ RED.suggestions = function() {
             return { type: "Suggestion", text : "Wait for the game to load.." }; // sic: this needs *two* dots!
         }
 
+        // always show the tip about dragging
         if (!suggestions[0].predicate()) {
             return suggestions[0];
+        }
+
+        // always show the tip about linking
+        if (!suggestions[1].predicate()) {
+            return suggestions[1];
         }
 
         if (Math.random() < 0.5) {
@@ -300,7 +306,7 @@ RED.suggestions = function() {
 
         var anySkipped = false;
         for (var j = 0; j < 2; j++) {
-            for (var i = 0; i < suggestions.length; i++) {
+            for (var i = 2; i < suggestions.length; i++) {
                 if (!suggestions[i].predicate()) {
                     // TODO: is the randomization sensible?
                     if (j === 0 && i !== suggestions.length - 1 && Math.random() < 0.5) {

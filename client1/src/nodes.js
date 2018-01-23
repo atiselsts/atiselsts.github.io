@@ -131,7 +131,7 @@ RED.nodes = function() {
     // - they are not too far away.
     //
     function canBeLinked(s, d) {
-        var result = {ok: false , error: ""};
+        var result = {ok: false, protocolsOk : false, error: ""};
         var anyProtocol = false;
         var rightDirection = false;
         var distanceOk = false;
@@ -155,7 +155,8 @@ RED.nodes = function() {
             }
         });
 
-        result.ok = anyProtocol && rightDirection && distanceOk;
+        result.protocolsOk = anyProtocol && rightDirection;
+        result.ok = result.protocolsOk && distanceOk;
         if (!result.ok) {
             if (!anyProtocol) {
                 result.error = "These nodes cannot be linked directly: they do not share any common communication protocols";

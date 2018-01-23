@@ -723,7 +723,7 @@ RED.view = function() {
                 nn.changed = true;
 
                 if (!RED.nodes.canAddNode(nn)) {
-                    RED.notify("Cannot add this node: credit limit would be exceeded!", "error");
+                    RED.notify("Cannot add this device: the credit limit would be exceeded!", "error");
                     return;
                 }
 
@@ -976,7 +976,7 @@ RED.view = function() {
             }
 
             if (mouseup_node === mousedown_node) {
-                RED.notify("Cannot connect a node with itself!");
+                RED.notify("Cannot connect a device with itself!");
                 drag_line.attr("class", "drag_line_hidden");
                 resetMouseVars();
                 return;
@@ -1011,7 +1011,7 @@ RED.view = function() {
                 } else {
                     RED.notify(canBeLinked.error ?
                                canBeLinked.error :
-                               "These nodes cannot be linked", "error");
+                               "These devices cannot be linked", "error");
                 }
             }
             setSelectedLink(null);
@@ -1411,7 +1411,7 @@ RED.view = function() {
                             && mousedown_port_type !== 0
                             && portsNode !== mousedown_node
                             // can be linked from  this (port's) node to mousedown_node
-                            && RED.nodes.canBeLinked(portsNode, mousedown_node).ok;
+                            && RED.nodes.canBeLinked(portsNode, mousedown_node).protocolsOk;
                         port.classed("port_connectable", canConnect);
                     });
                 }
@@ -1452,7 +1452,7 @@ RED.view = function() {
                             && mousedown_port_type !== 1
                             && portsNode !== mousedown_node
                             // can be linked from mousedown_node to this (port's) node
-                            && RED.nodes.canBeLinked(mousedown_node, portsNode).ok;
+                            && RED.nodes.canBeLinked(mousedown_node, portsNode).protocolsOk;
                         port.classed("port_connectable", canConnect);
                     });                    
                 }
@@ -1824,9 +1824,9 @@ RED.view = function() {
 
     function showIntro() {
         var dialog = $('#node-dialog-intro1');
-        dialog.modal().css({
-            width: '600'
-        });
+        dialog.modal()//.css({
+//            width: '600'
+//        });
     }
 
     $('#btn-show-intro').click(showIntro);
@@ -1834,9 +1834,9 @@ RED.view = function() {
 
     $( "#dialog-intro1-button" ).click(function() {
         var dialog = $('#node-dialog-intro2');
-        dialog.modal().css({
-            width: '600'
-        });
+        dialog.modal()//.css({
+//            width: '600'
+//        });
     });
 
     $('#btn-show-about').click(function() {

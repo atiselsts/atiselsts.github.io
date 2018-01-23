@@ -175,14 +175,14 @@
   </div>
   <br/>
   <div class="form-tips">
-    <p><strong>Tip:</strong> communication is only possible if the source and destination nodes are sufficiently close. Different protocols have different communication ranges; if a protocol is supported by both nodes, but impossible to use because the nodes are too far away, it will be shown as disabled in the list.
+    <p><strong>Tip:</strong> communication is only possible if the source and destination devices are sufficiently close. Different protocols have different communication ranges; if a protocol is supported by both devices, but impossible to use because they are too far away, it will be shown as disabled in the list.
   </div>
 </script>
 
 <div id="node-dialog-confirm-save" class="hide">
     <form class="form-horizontal">
         <div id="node-dialog-confirm-save-config" style="text-align: center; padding-top: 30px;">
-         Some of the nodes or links are not properly configured. Are you sure you want to save?
+         Some of the devices or links are not properly configured. Are you sure you want to save?
         </div>
         <div id="node-dialog-confirm-save-unknown" style="text-align: center; padding-top: 10px;">
          The workspace contains some unknown node types:
@@ -224,7 +224,7 @@
         </tr>
         <tr>
           <td></td><td></td>
-          <td><span class="help-key">Delete</span></td><td>Delete selected nodes or link</td>
+          <td><span class="help-key">Delete</span></td><td>Delete selected devices or link</td>
         </tr>
         <tr>
           <td><span class="help-key">Ctrl</span> <span class="help-key">x</span></td><td>Cut selected nodes</td>
@@ -290,25 +290,32 @@
 
 <div id="node-dialog-intro1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="node-intro-label" aria-hidden="true">
   <div class="modal-header">
-    <h5 id="node-intro-label"><img src="images/info-icon.png" /> Introduction</h5>
+    <h5 id="node-intro-label"><img src="images/home.png" />&nbsp;&nbsp;&nbsp;&nbsp;Introduction</h5>
   </div>
   <div class="modal-body">
     <form class="form-horizontal">
       <div id="dialog-intro-text-container1">
-        <p>Welcome to the Smart Home Architect!</p>
+        <p>You are the Smart Home Architect.</p>
 
-        <p>The goal of this game is to design a system for health monitoring in a home environment.</p>
+        <p>Your mission is to design a system for monitoring health-related behaviors.</p>
 
-        <p>You're given a set of sensors and other hardware devices. You need to put them in a meaningful system, able to gather interesting data related to health and behaviour.</p>
+ <!--          ing the house with the tree sensing modalities: environmental, video, and wearable,  -->
 
-        <p>The sensors and other hardware are based on devices used in the <a href="http://www.irc-sphere.ac.uk/">SPHERE project</a>.</p>
+        <p>Your goals are to:
+          <ul>
+            <li>Capture participant activities and location by using wristband sensors and forwarding gateways;</li>
+            <li>Capture the ambient temperature, humidity and lighting levels through the house with environmental sensors;</li>
+            <li>Capture detailed movement and location information with cameras connected to video processing gateways;</li>
+            <li>Store the captured data on a home gateway.</li>
+          </ul>
+        </p>
 
-        <p>&copy; University of Bristol 2018</p>
+<!--        <p>&copy; University of Bristol 2018</p> -->
       </div>
     </form>
   </div>
   <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true" id="dialog-intro1-button">Next</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true" id="dialog-intro1-button">How to play...</button>
   </div>
 </div>
 
@@ -319,24 +326,28 @@
   <div class="modal-body">
     <form class="form-horizontal">
       <div id="dialog-intro-text-container2">
+
+        <p>Use the sensors and other hardware devices; place them in the rooms and connect together to create a meaningful system:</p>
         <ul>
-          <li>Install devices in the house: click and drag nodes from the palette to the floor plan.</li>
+          <li>Click and drag the devices from the palette onto the floor plan.</li>
+          <li>Place the devices in appropriate rooms. For example, install sensors in kitchen to gather data about behaviors releated to cooking and eating.</li>
           <li>Connect the devices with communication links.</li>
-          <li>Place the devices in appropriate rooms. For example, add sensors in kitchen to gather data about cooking and eating related behaviours.</li>
-          <li>Design the overall system in a way that makes sense, allows to monitor the "interesting" bits, and uses appropriate communication protocols.</li>
+<!--          <li>Design the overall system in a way that makes sense, allows to monitor the "interesting" bits, and uses appropriate communication protocols.</li> -->
         </ul>
 
         <p>If you get stuck, look carefully at the suggestions shown by the system. They contain information on what to do next, as well as how to fix the current problems.</p>
 
         <p>The main goal of the game is to explore the options and to enjoy the process.
-          However, if you feel more ambitious, you could try to fully covering the house with the tree sensing modalities: environmental, video, and wearable, and unlock the full list of achievements.</p> <!-- TODO: link --->
+          However, if you feel more ambitious, you could fully covering the house with all three sensing modalities and unlocking the full list of achievements.</p>
+
+        <p>This game is based on the <a href="http://irc-sphere.ac.uk/">SPHERE</a> <a href="https://www.youtube.com/watch?v=zp1CiE4fCTY">project</a>.</p>
 
         <p>Have fun!</p>
       </div>
     </form>
   </div>
   <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true" id="dialog-intro-button">Start!</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true" id="dialog-intro-button">Start</button>
   </div>
 </div>
 
