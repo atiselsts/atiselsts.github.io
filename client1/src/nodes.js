@@ -159,11 +159,15 @@ RED.nodes = function() {
         result.ok = result.protocolsOk && distanceOk;
         if (!result.ok) {
             if (!anyProtocol) {
-                result.error = "These nodes cannot be linked directly: they do not share any common communication protocols";
+                if (s._def.modality === "wearable" || d._def.modality === "wearable") {
+                    result.error = "Links to Wristband Sensors do not have to be configured: these devices are mobile and will automatically connect to nearby gateways";
+                } else {
+                    result.error = "These devices cannot be linked directly: they do not share any common communication protocols";
+                }
             } else if (!rightDirection) {
-                result.error = "These nodes cannot be linked in this direction";
+                result.error = "These devices cannot be linked in this direction";
             } else {
-                result.error = "These nodes cannot be linked: they are too far away";
+                result.error = "These devices cannot be linked: they are too far away";
             }
         }
         return result;
