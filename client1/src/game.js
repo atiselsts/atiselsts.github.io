@@ -79,8 +79,12 @@ RED.game = function() {
             // add all nodes linking to this one as target, and haven't been seen yet
             var connectedLinks = links.filter(function(l) {
                 // Normally pick up only nodes that input data in the current one;
-                // but allow the information to flow both ways between SHG and whateve they're connected to
-                return l.target === node || (node._def.isHomeGateway && l.source === node);
+                // but allow the information to flow both ways between SHG and whatever they're connected to,
+                //return l.target === node || (node._def.isHomeGateway && l.source === node);
+
+                // Changed to always allow the data to flow in both directions:
+                // just in case requiring the difference between input and output links is too confusing.
+                return l.target === node || l.source === node;
             });
 
             connectedLinks.forEach(function (l) {

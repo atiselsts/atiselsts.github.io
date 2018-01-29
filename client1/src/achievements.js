@@ -217,27 +217,26 @@ RED.achievements = function() {
 
     achievements.push({
         name: "Environmental sensing",
-        explanation : "You have collected the first data from an environmental sensor",
+        explanation : "You have collected the first data from an environmental sensor: temperature, humidity, light levels, and movement detection (via a PIR sensor)",
         predicate:  function() { return  anyCoverage("environmental", true)}
     });
     achievements.push({
         name: "Wearable sensing",
-        explanation : "You have collected the first data from a wristband sensor",
+        explanation : "You have collected the first data from a wristband sensor: activity levels and location information",
         predicate: function() { return anyCoverage("wearable", false)
                                 && anyCoverage("gateway", true);}
     });
     achievements.push({
         name: "Video sensing",
-        explanation : "You have collected first information extracted from video data",
+        explanation : "You have collected the first information extracted from video data: location information, movement quality, and information about activity types",
         predicate: function() { return anyCoverage("video", true)}
     });
 
     achievements.push({
         name: "Mesh network",
-        explanation : "You have connected two forwarding gateways with each another, forming a wireless mesh network",
+        explanation : "You have connected two forwarding gateways with each other, forming a wireless mesh network. This will allow to extend the range of wireless coverage",
         predicate: isMeshNetwork
     });
-
 
     achievements.push({
         name: "Full environmental sensing",
@@ -247,24 +246,25 @@ RED.achievements = function() {
 
     achievements.push({
         name: "Full wearable sensing",
-        explanation : "You have fully covered the house with devices picking up data from wristband (wearable) sensors (at least one for each two rooms)",
+        explanation : "You have fully covered the house with devices picking up data from wristband (wearable) sensors: at least one for each two rooms",
         predicate: fullWearableCoverage
     });
+
     achievements.push({
         name: "Full video sensing",
-        explanation : "You have installed video sensors in the hall, kitchen, and living room, the main areas of interest for video sensing",
+        explanation : "You have installed video sensors in the hall, kitchen, and living room: the main areas of interest for video sensing",
         predicate: fullVideoCoverage
     });
 
     achievements.push({
         name: "System monitoring",
-        explanation : "You have installed a monitoring service over a 3G mobile connection. This will allow to schedule maintenance visits if some of the components stop working or otherwise break down",
+        explanation : "You have installed a monitoring service over a 3G mobile connection. This will allow to remotely learn the state of the system, and schedule a maintenance visit in case some of the components have stopped working correctly",
         predicate:  systemMonitoring
     });
 
     achievements.push({
         name: "Sleep monitoring",
-        explanation : "You have installed a Wristband Sensor and a Forwarding Gateway in a bedroom. This will allow to monitor the activity levels during sleep",
+        explanation : "You have installed a wristband sensor and a forwarding gateway in a bedroom. This will allow to monitor activity levels during sleep",
         predicate:  sleepMonitoring
     });
 
@@ -286,35 +286,35 @@ RED.achievements = function() {
 
     achievements.push({
         name: "Minimalist",
-        explanation : "You have covered the whole house with just two Forwarding Gateways.<br><br>Note that while this is cost-efficient in the short term, adding some redundancy is usually a better option that helps to avoid losing data even after some devices break down",
+        explanation : "You have covered the whole house with just two forwarding gateways.<br><br>Note that while this is cost-efficient in the short term, adding some redundancy is usually a better option that helps to avoid losing data even if some devices stop working, which in home environment may happen due to a variety of reasons",
         predicate:  isMinimalist,
         isHidden: true
     });
 
     achievements.push({
         name: "Indoor localization",
-        explanation : "You have installed Forwarding Gateways in sufficiently many rooms. This will allow to accurately track the location of the users of wristband sensors. From healthcare perspective, increasingly stationary lifestyle may signal deterioration",
+        explanation : "You have installed forwarding gateways in sufficiently many rooms. This will allow to accurately track the location of the users of wristband sensors. From healthcare perspective, a lifestyle that is increasingly stationary may increasingly deteriorating health",
         predicate:  indoorLocalization,
         isHidden: true
     });
 
     achievements.push({
         name: "Water monitoring: kitchen",
-        explanation : "You have installed a Water Sensor in kitchen. Food preparation and water consumption habits are highly correlated with long-term health outcomes",
+        explanation : "You have installed a water sensor in kitchen. Food preparation and water consumption habits are highly correlated with long-term health outcomes",
         predicate:  function() { return isWaterSensor("kitchen")},
         isHidden: true
     });
 
     achievements.push({
         name: "Water monitoring: bathroom",
-        explanation : "You have installed a Water Sensor in bathroom. It may be helpful to know the showering frequency and duration for the energy bill",
+        explanation : "You have installed a water sensor in bathroom. It may be helpful to know the showering frequency and duration; if not for health reasons, then at least for the energy bill",
         predicate:  function() { return isWaterSensor("bathroom")},
         isHidden: true
     });
 
     achievements.push({
         name: "Water monitoring: toilet",
-        explanation : "You have installed a Water Sensor in toilet. Frequency of its usage may be correlated with health",
+        explanation : "You have installed a water sensor in toilet. Frequency of toilet usage may be correlated with health; changes in this frequency may signal health problems",
         predicate:  function() { return isWaterSensor("toilet")},
         isHidden: true
     });

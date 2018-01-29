@@ -151,6 +151,10 @@ RED.sidebar = function() {
     function containsTab(id) {
         return sidebar_tabs.contains("tab-"+id);
     }
+
+    $('#sidebar').on("mouseenter", function () {
+        RED.view.showSelected();
+    });
     
     return {
         addTab: addTab,

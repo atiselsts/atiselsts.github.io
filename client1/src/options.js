@@ -47,7 +47,7 @@ RED.options = function() {
             color: "#bf360c",
             range : 7 * options.distanceMetersToPixels,
             mode: "wireless",
-            description: "Bluetooth Low Energy (BLE) is a network protocol for low-power wireless networks.<br/><br/>BLE is widely used in consumer electronics. The current version of SPHERE uses BLE version 4. BLE uses 2.4 GHz frequency band and adaptive frequency hopping."
+            description: "Bluetooth Low Energy (BLE) is a network protocol for low-power wireless networks.<br/><br/>BLE is widely used in consumer electronics, such as smartphones and smartwatches. BLE uses 2.4 GHz frequency band, and applies adaptive frequency hopping in order to survive interference from other 2.4 GHz wireless  devices. The current version of SPHERE uses BLE version 4."
         },
         "USB" : {
             nm: "USB",

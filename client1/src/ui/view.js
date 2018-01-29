@@ -114,6 +114,7 @@ RED.view = function() {
         .on("mousemove", canvasMouseMove)
         .on("mousedown", canvasMouseDown)
         .on("mouseup", canvasMouseUp)
+        .on("mouseleave", canvasMouseLeave)
         .on("touchend", function() {
             clearTimeout(touchStartTime);
             touchStartTime = null;
@@ -428,6 +429,32 @@ RED.view = function() {
         if (selected_link) selected_link.selected = false;
         if (d) d.selected = true;
         selected_link = d;
+    }
+
+    function showSelected() {
+        // if a link is selected
+        if (selected_link) {
+            RED.sidebar.info.refreshLink(selected_link);
+            return;
+        }
+        // if there is a moving set
+        var result = null;
+        if (moving_set.length > 0) {
+            result = moving_set[0].n;
+        }
+        else{
+            // just pick any node that is marked as selected
+            RED.nodes.eachNode(function(n) {
+                if (n.z == active_ws) {
+                    if (n.selected && result === null) {
+                        result = n;
+                    }
+                }
+            });
+        }
+        if (result) {
+            RED.sidebar.info.refreshNode(result);
+        }
     }
 
     function canvasMouseDown() {
@@ -752,6 +779,12 @@ RED.view = function() {
                 }
             }
     });
+
+    function canvasMouseLeave() {
+        // Clear the info about the selected node or link;
+        // this will helpfully show the next suggestion to the user.
+        RED.sidebar.info.clear();
+    }
 
     function zoomIn() {
         var status = getWorkspaceStatus(active_ws);
@@ -2151,6 +2184,7 @@ RED.view = function() {
         },
         resetOptions: resetOptions,
         setSelectedLink : setSelectedLink,
+        showSelected : showSelected,
         clearDevices : clearDevices,
         clearAchievements : clearAchievements,
         showIntro : showIntro,
