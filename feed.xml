@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Atis Elsts</title>
+		<description>Academic homepage</description>
+		<link>/~atiel485http://user.it.uu.se/~atiel485/</link>
+		<atom:link href="/~atiel485http://user.it.uu.se/~atiel485//feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>About me</title>
+				<description>&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;Dr Atis Elsts is a Research Associate with the University of Bristol, UK, and a core member of the &lt;a href=&quot;http://www.irc-sphere.ac.uk/&quot;&gt;SPHERE interdisciplinary research collaboration&lt;/a&gt; (IRC). His research interest are in the field of Networked Embedded Systems, and more broadly, in the Internet of Things. Atis is also a contributor and a maintainer of the &lt;a href=&quot;http://contiki-ng.org/&quot;&gt;Contiki-NG&lt;/a&gt; operating system for the Internet of Things, and a member of IEEE.&lt;/p&gt;
+
+&lt;h3 id=&quot;highlights-of-recent-publications&quot;&gt;Highlights of recent publications&lt;/h3&gt;
+
+&lt;p&gt;On the SPHERE project (smart homes for healthcare): on the &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/sphere-network-infrastructure-final-preprint.pdf&quot;&gt;low-power wireless infrastructure for the 100-homes deployement&lt;/a&gt;, on &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/iot-lessons-elsts2017.pdf&quot;&gt;lessons learned from using the Contiki OS&lt;/a&gt;, on &lt;a href=&quot;http://eis.bris.ac.uk/%7Exf14883/files/conf/2018_ewsn_embedded_features.pdf&quot;&gt;feature extraction&lt;/a&gt; on wearables for daily activity recognition of the participants.&lt;/p&gt;
+
+&lt;p&gt;On the Time Slotted Channel Hopping (TSCH) network protocol: &lt;a href=&quot;http://www.simonduquennoy.net/papers/duquennoy17tsch.pdf&quot;&gt;TSCH for Contiki&lt;/a&gt;, &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/tsch-channels-elsts2017.pdf&quot;&gt;channel selection&lt;/a&gt;, &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/tsch-scheduling-elsts2017.pdf&quot;&gt;scheduling&lt;/a&gt;, &lt;a href=&quot;https://github.com/IRC-SPHERE/tsch-simulator&quot;&gt;simulation&lt;/a&gt;, the &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/tsch-microsecond-sync.pdf&quot;&gt;TSCH implementation on CC2650&lt;/a&gt;, and time synchronization using TSCH &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/tsch-microsecond-sync.pdf&quot;&gt;(1)&lt;/a&gt; &lt;a href=&quot;http://eis.bris.ac.uk/%7Exf14883/files/journal/2017_tii_temp.pdf&quot;&gt;(2)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;software-and-datasets&quot;&gt;Software and datasets&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://contiki-ng.org/&quot;&gt;Contiki-NG&lt;/a&gt;, an IoT operating system&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/atiselsts/contiki/tree/ptsch&quot;&gt;Microsecond-accuracy time synchronization&lt;/a&gt; implementation using TSCH on Texas Instruments CC2650 hardware.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A simple TSCH &lt;a href=&quot;https://github.com/IRC-SPHERE/tsch-simulator&quot;&gt;simulator&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://irc-sphere.github.io/smart-home-architect/&quot;&gt;Smart Home Architect&lt;/a&gt;, a web-based game that interactively demonstrates the &lt;a href=&quot;http://www.irc-sphere.ac.uk/&quot;&gt;SPHERE&lt;/a&gt; technology.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See &lt;a href=&quot;https://github.com/atiselsts/&quot;&gt;GitHub&lt;/a&gt; for more.&lt;/p&gt;
+
+&lt;h3 id=&quot;highlights-of-research-positions&quot;&gt;Highlights of research positions&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Researcher at &lt;a href=&quot;http://www.sics.se&quot;&gt;SICS Swedish ICT&lt;/a&gt; (now RISE SICS), 2015. Atis was a member of the Networked Embedded Systems Group and participated in implementing the IEEE 802.15.4 TSCH protocol in the Contiki operating system.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Researcher at Uppsala University, 2014-2015. Atis was involved in the ProFuN project (&lt;em&gt;A Programming Platform for Future Wireless Sensor Networks&lt;/em&gt;), where his contribution was &lt;a href=&quot;http://parapluu.github.io/profun/&quot;&gt;the ProFuN TG&lt;/a&gt;, a tool for developing and managing sensor network applications that are aware of performance requirements.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Research assistant at Institute of Electronics and Computer Science (IECS or EDI, Riga, Latvia), 2010-2013, and PhD student at University of Latvia. Atis&amp;#39; PhD thesis describes a software framework designed to facilitate wireless sensor network programming.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Tue, 07 Apr 2015 16:25:06 +0200</pubDate>
+				<link>http://user.it.uu.se/~atiel485//~atiel485/2015/04/intro</link>
+				<guid isPermaLink="true">http://user.it.uu.se/~atiel485//~atiel485/2015/04/intro</guid>
+			</item>
+		
+			<item>
+				<title>Publications</title>
+				<description>&lt;h1 id=&quot;journal-papers&quot;&gt;Journal papers&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, X. Fafoutis, P. Woznowski, E. Tonkin, G. Oikonomou, R. Piechocki and I. Craddock. &lt;em&gt;Enabling Healthcare in Smart Homes: The SPHERE IoT Network Infrastructure&lt;/em&gt;, IEEE Communications Magazine. &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/sphere-network-infrastructure-final-preprint.pdf&quot;&gt;[PDF]&lt;/a&gt; DOI: &lt;a href=&quot;https://doi.org/10.1109/MCOM.2017.1700791&quot;&gt;https://doi.org/10.1109/MCOM.2017.1700791&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;N. Twomey, T. Diethe, X. Fafoutis, &lt;strong&gt;A. Elsts&lt;/strong&gt;, R. McConville, P. Flach and I. Craddock. &lt;em&gt;A Comprehensive Study of Activity Recognition using Accelerometers&lt;/em&gt;. MPDI Informatics, 2018. DOI: &lt;a href=&quot;https://doi.org/10.3390/informatics5020027&quot;&gt;https://doi.org/10.3390/informatics5020027&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;X. Fafoutis, &lt;strong&gt;A. Elsts&lt;/strong&gt;, R. Piechocki and I. Craddock. &lt;em&gt;Experiences and Lessons Learned from Making IoT Sensing Platforms for Large-Scale Deployments&lt;/em&gt;, IEEE Access, 2018. DOI: &lt;a href=&quot;https://doi.org/10.1109/ACCESS.2017.2787418&quot;&gt;https://doi.org/10.1109/ACCESS.2017.2787418&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, X. Fafoutis, S. Duquennoy, G. Oikonomou, R. Piechocki and I. Craddock. &lt;em&gt;Temperature-Resilient Time Synchronization for the Internet of Things&lt;/em&gt;, IEEE Transactions on Industrial Informatics, 2018. &lt;a href=&quot;http://eis.bris.ac.uk/%7Exf14883/files/journal/2017_tii_temp.pdf&quot;&gt;[PDF]&lt;/a&gt; DOI: &lt;a href=&quot;https://doi.org/10.1109/TII.2017.2778746&quot;&gt;https://doi.org/10.1109/TII.2017.2778746&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;X. Fafoutis, A. Vafeas, B. Janko, R. S. Sherratt, J. Pope, &lt;strong&gt;A. Elsts&lt;/strong&gt;, E. Mellios, G. Hilton, G. Oikonomou, R. Piechocki and I. Craddock. &lt;em&gt;Designing Wearable Sensing Platforms for Healthcare in a Residential Environment&lt;/em&gt;. EAI Endorsed Transactions on Pervasive Health and Technology, 17(12), 2017. &lt;a href=&quot;http://eis.bris.ac.uk/%7Exf14883/files/journal/2017_tpht_wearable.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, A. Pentjuss and E. Stalidzans, &lt;em&gt;SpaceScanner: COPASI wrapper for automated management of global stochastic optimisation experiments&lt;/em&gt;, Bioinformatics, Oxford University Press, 2017, DOI: &lt;a href=&quot;http://doi.org/10.1093/bioinformatics/btx363&quot;&gt;http://doi.org/10.1093/bioinformatics/btx363&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;V. Komasilovs, A. Pentjuss, &lt;strong&gt;A. Elsts&lt;/strong&gt; and E. Stalidzans, &lt;em&gt;Total enzyme activity constraint and homeostatic constraint impact on the optimization potential of a kinetic model&lt;/em&gt;, Biosystems, Elsevier, 2017, DOI: &lt;a href=&quot;https://doi.org/10.1016/j.biosystems.2017.09.016&quot;&gt;https://doi.org/10.1016/j.biosystems.2017.09.016&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, A. Mednis and L. Selavo. &lt;em&gt;Bayesian Network Approach to Vehicle Mode Monitoring Using Embedded System with 3-axis Accelerometer,&lt;/em&gt; International Journal of Imaging &amp;amp; Robotics (ISSN 2231-525X), Vol 13(1), 2014.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;G. Strazdins, &lt;strong&gt;A. Elsts&lt;/strong&gt;, K. Nesenbergs and L. Selavo. &lt;em&gt;Wireless sensor network operating system design rules based on real-world deployment survey,&lt;/em&gt; Journal of Sensor and Actuator Networks, Vol 2(3), pp. 509-556, 2013.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;br&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;conference-and-workshop-papers&quot;&gt;Conference and workshop papers&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, J. Pope, X. Fafoutis, R. Piechocki, G. Oikonomou. &lt;em&gt;Instant: A TSCH Schedule for Data Collection from Mobile Nodes&lt;/em&gt;. EWSN 2019, Beijing, February 2019.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, E. Mitskas, G. Oikonomou. &lt;em&gt;Distributed Ledger Technology and the Internet of Things: A Feasibility Study&lt;/em&gt;. The 1st Workshop on Blockchain-enabled Networked Sensor Systems (BlockSys), Shenzhen, November 2018. &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/iota-iot-2018.pdf&quot;&gt;[PDF]&lt;/a&gt; &lt;strong&gt;(Best Paper Award)&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;X. Fafoutis, &lt;strong&gt;A. Elsts&lt;/strong&gt;, A. Vafeas, G. Oikonomou, R. Piechocki. &lt;em&gt;On Predicting the Battery Lifetime of IoT Devices: Experiences from the SPHERE Deployments&lt;/em&gt;. 7th International Workshop on Real-World Embedded Wireless Systems and Networks (RealWSN), Shenzhen, November 2018. &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/realwsn18-final13.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;X. Fafoutis, &lt;strong&gt;A. Elsts&lt;/strong&gt;, G. Oikonomou, and R. Piechocki. &lt;em&gt;SPHERE deployment manager: a tool for deploying IoT sensor networks at large scale&lt;/em&gt;. In Proceedings of the 7th International Conference on Ad Hoc Networks and Wireless (AdHoc-NOW), St. Malo, France, September 2018.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A. Vafeas, &lt;strong&gt;A. Elsts&lt;/strong&gt;, J. Pope, X. Fafoutis, G. Oikonomou, R. Piechocki and I. Craddock. &lt;em&gt;Energy-Efficient, Noninvasive Water Flow Sensor&lt;/em&gt;. In Proceedings of 4th IEEE International Conference on Smart Computing (SMARTCOMP), Taormina, Italy, June 2018.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;J. Pope, A. Vafeas, &lt;strong&gt;A. Elsts&lt;/strong&gt;, G. Oikonomou, R. Piechocki, I. Craddock. &lt;em&gt;An Accelerometer Lossless Compression Algorithm and Energy Analysis for IoT Devices&lt;/em&gt;, IoT-Health 2018, IEEE Wireless Communications and Networking Conference Workshops (WCNCW).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, R. McConville, X. Fafoutis, N. Twomey, R. Piechocki, R. Santos-Rodriguez and I. Craddock.  &lt;em&gt;On-Board Feature Extraction from Acceleration Data for Activity Recognition,&lt;/em&gt; EWSN 2018. &lt;a href=&quot;http://eis.bris.ac.uk/%7Exf14883/files/conf/2018_ewsn_embedded_features.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;X. Fafoutis, &lt;strong&gt;A. Elsts&lt;/strong&gt;, G. Oikonomou, R. Piechocki and I. Craddock. &lt;em&gt;Adaptive Static Scheduling in IEEE 802.15.4 TSCH Networks&lt;/em&gt;, 2018 IEEE 4th World Forum on Internet of Things (WF-IoT).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;X. Fafoutis, L. Marchegiani, &lt;strong&gt;A. Elsts&lt;/strong&gt;, J. Pope, R. Piechocki and I. Craddock. &lt;em&gt;Extending the Battery Lifetime of Wearable Sensors with Embedded Machine Learning&lt;/em&gt;, 2018 IEEE 4th World Forum on Internet of Things (WF-IoT).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, G. Oikonomou, X. Fafoutis and R. Piechocki. &lt;em&gt;Internet of Things for Smart Homes: Lessons Learned from the SPHERE Case Study&lt;/em&gt;, 1st Global Internet of Things Summit, 2017. &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/iot-lessons-elsts2017.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, X. Fafoutis, G. Oikonomou and R. Piechocki. &lt;em&gt;Adaptive Channel Selection in IEEE 802.15.4 TSCH Networks&lt;/em&gt;, 1st Global Internet of Things Summit, 2017. &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/tsch-channels-elsts2017.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;S. Duquennoy, &lt;strong&gt;A. Elsts&lt;/strong&gt;, B. Al Nahas, G. Oikonomou. &lt;em&gt;TSCH and 6TiSCH for Contiki: Challenges, Design and Evaluation&lt;/em&gt;, DCOSS, 2017. &lt;a href=&quot;http://www.simonduquennoy.net/papers/duquennoy17tsch.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, X. Fafoutis, J. Pope, G. Oikonomou, R. Piechocki and I. Craddock. &lt;em&gt;Scheduling High-Rate Unpredictable Traffic in IEEE 802.15.4 TSCH Networks&lt;/em&gt;, DCOSS, 2017. &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/tsch-scheduling-elsts2017.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, S. Duquennoy, X. Fafoutis, G. Oikonomou, R. Piechocki and I. Craddock, &lt;em&gt;Microsecond-Accuracy Time Synchronization Using the IEEE 802.15.4 TSCH Protocol&lt;/em&gt;, IEEE LCN 2016. &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/tsch-microsecond-sync.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;. &lt;em&gt;Source-Node Selection to Increase the Reliability of Sensor Networks for Building Automation&lt;/em&gt;. EWSN 2016. &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/elsts_ewsn2016.pdf&quot;&gt;[PDF]&lt;/a&gt; &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/elsts_ewsn2016_presentation.pdf&quot;&gt;[presentation]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, Farshid Hassani Bijarbooneh, Martin Jacobsson, and Konstantinos Sagonas, &lt;em&gt;ProFuN TG: A Tool for Programming and Managing Performance-Aware Sensor Network Applications&lt;/em&gt;. IEEE SenseApp, 2015. &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/senseapp_2015.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, Hjalmar Wennerstrom, and Christian Rohner. &lt;em&gt;IEEE 802.15.4 Channel Diversity in an Outdoor Environment&lt;/em&gt;. RealWSN, 2015. &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/realwsn_2015.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, Farshid Hassani Bijarbooneh, Martin Jacobsson, and Konstantinos Sagonas, &lt;em&gt;Enabling Design of Performance-Controlled Sensor Network Applications Through Task Allocation and Reallocation&lt;/em&gt;. In proceedings of DCOSS 2015 (presented in the IEEE 7th International Workshop on Performance Control in Wireless Sensor Networks). &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/pwsn_2015.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt; and L. Selavo, &lt;em&gt;Improving the Usability of Wireless Sensor Network Operating Systems,&lt;/em&gt; 2013 Federated Conference on Computer Science and Information Systems (FedCSIS). &lt;a href=&quot;https://annals-csis.org/Volume_1/pliks/65.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, J. Judvaitis, L. Selavo, &lt;em&gt;SEAL: A Domain-Specific Language for Novice Wireless Sensor Network Programmers,&lt;/em&gt; 39th Euromicro Conference on Software Engineering and Advanced Applications (SEAA 2013), Santander, Spain, September 4-6, 2013, pp. 220-227. &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/seaa_2013.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt; and L. Selavo, &lt;em&gt;A User-Centric Approach to Wireless Sensor Network Programming Languages,&lt;/em&gt; Proceedings of Third International Workshop on Software Engineering for Sensor Network Applications (SESENA12), Zurich, Switzerland, pp. 29-30, June 2, 2012. &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/sesena_2012.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A. Mednis, &lt;strong&gt;A. Elsts&lt;/strong&gt;, and L. Selavo. &lt;em&gt;Embedded Solution for Road Condition Monitoring Using Vehicular Sensor Networks,&lt;/em&gt; in Proceedings of the 6th International Conference on Application of Information and Communication Technologies (AICT 2012), pp. 248-252, IEEE, 2012. &lt;a href=&quot;http://mansos.edi.lv/wp-content/uploads/2013/01/carmote_aict_2012.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, R. Balass, J. Judvaitis and L. Selavo, &lt;em&gt;SAD: Wireless Sensor Network System for Microclimate Monitoring in Precision Agriculture,&lt;/em&gt; in Proceedings of the 5-th international scientific conference Applied information and communication technologies (AICT 2012), Jelgava, Latvia, April 26-27, ISBN 978-9984-48-065-7, pp. 271-281, 2012. &lt;a href=&quot;http://mansos.edi.lv/wp-content/uploads/2012/04/ELSTS_AICT2012.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, R. Balass, J. Judvaitis, R. Zviedris, G. Strazdins, L. Selavo and A. Mednis, &lt;em&gt;SADmote: A Robust and Cost-Effective Device for Environmental Monitoring,&lt;/em&gt; in Proceedings of the conference on Architecture of Computing Systems (ARCS 2012), pp. 225-237, Springer-Verlag Berlin Heidelberg 2012. &lt;a href=&quot;http://mansos.edi.lv/wp-content/uploads/2012/04/sadmote_arcs-2012.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;br&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;book-chapters&quot;&gt;Book chapters&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;P. Woznowski, A. Burrows, T. Diethe, X. Fafoutis, J. Hall, S. Hannuna, M. Camplani, N. Twomey, M. Kozlowski, B. Tan, N. Zhu, &lt;strong&gt;A. Elsts&lt;/strong&gt;, A. Vafeas, A. Paiement, L. Tao, M. Mirmehdi, T. Burghardt, D. Damen, P. Flach, R. Piechocki, I. Craddock and G. Oikonomou. &lt;em&gt;SPHERE: A Sensor Platform for Healthcare in a Residential Environment&lt;/em&gt;. In Designing, Developing, and Facilitating Smart Cities: Urban Design to IoT Solutions, pp 315-333, Springer, 2017.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;br&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;poster-demo-abstracts-technical-reports-and-national-level-workshop-papers&quot;&gt;Poster &amp;amp; demo abstracts, technical reports, and national-level workshop papers&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;X. Fafoutis, &lt;strong&gt;A. Elsts&lt;/strong&gt;, A. Vafeas, G. Oikonomou and R. Piechocki. &lt;em&gt;Demo: SPES-2 – A Sensing Platform for Maintenance-Free Residential Monitoring&lt;/em&gt;, EWSN 2017. &lt;a href=&quot;http://eis.bris.ac.uk/%7Exf14883/files/demo/2017_ewsn_spes-2.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, X. Fafoutis, A. Adeleke, G. Oikonomou, R. Piechocki, S. Duquennoy, A. Liñán, M. Fàbregas. &lt;em&gt;Competition: Adaptive Time-Slotted Channel Hopping&lt;/em&gt;, EWSN 2017. &lt;a href=&quot;http://www.simonduquennoy.net/papers/elsts17ewsncompetition.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A. Mavromatis, G. Papadopoulos, X. Fafoutis, &lt;strong&gt;A. Elsts&lt;/strong&gt;, G. Oikonomou and T. Tryfonas, &lt;em&gt;Impact of Guard Time Length on IEEE 802.15.4e TSCH Energy Consumption&lt;/em&gt;. IEEE SECON 2016. &lt;a href=&quot;http://eis.bris.ac.uk/%7Exf14883/files/demo/2016_secon_tsch.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, Farshid Hassani Bijarbooneh, Martin Jacobsson, and Konstatinos Sagonas, &lt;em&gt;ProFuN TG: Programming Sensornets with Task Graphs for Increased Reliability and Energy-Efficiency&lt;/em&gt;. Accepted in IEEE Local Computer Networks (LCN 2015) Demo session.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, &lt;em&gt;Optimal Task Allocation in Sensor and Actuator Networks,&lt;/em&gt; SNCNW&amp;#39;15, Karlstad, May 28-29, 2015.&lt;br/&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt; and Konstantinos Sagonas, &lt;em&gt;ProFuN TG: A Tool for Programming and Managing Dependable Sensor Network Applications&lt;/em&gt;. Technical report, Uppsala University, 2015. &lt;a href=&quot;http://www.it.uu.se/research/profun/tools/tg-2015.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, Farshid Hassani Bijarbooneh, Martin Jacobsson, and Konstantinos Sagonas, &lt;em&gt;Demo Abstract: ProFuN TG: A Tool Using Abstract Task Graphs to Facilitate the Development, Deployment and Maintenance of Wireless Sensor Network Applications&lt;/em&gt;, in the 12th European Conference on Wireless Sensor Networks (EWSN&amp;#39;15), Porto, Portugal, 2015.&lt;br/&gt;
+&lt;a href=&quot;http://youtu.be/mU7IB27fzck&quot;&gt;[Video]&lt;/a&gt; &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/profun-ewsn2015.pdf&quot;&gt;[PDF]&lt;/a&gt; &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/poster_ewsn_2015.pdf&quot;&gt;[Poster]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt; and E. Ngai, &lt;em&gt;A Case For Node-Local Adaptations in Wireless Sensor Networks,&lt;/em&gt; SNCNW&amp;#39;14, Västerås, June 2-3, 2014.&lt;br/&gt;
+Poster: &lt;a href=&quot;http://user.it.uu.se/%7Eatiel485/sncnw-poster-2014.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;J. Judvaitis, &lt;strong&gt;A. Elsts&lt;/strong&gt;, L. Selavo, &lt;em&gt;Demo Abstract: SEAL-Blockly: Sensor Network Visual Programming Using a Web Browser&lt;/em&gt;, 10th European Conference on Wireless Sensor Networks (EWSN 2013), Poster and Demo Proceedings, Ghent, Belgium, 2013.&lt;br/&gt;
+Poster abstract: &lt;a href=&quot;http://mansos.edi.lv/wp-content/uploads/2013/03/ewsn-seal_blockly.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;br/&gt;
+Poster: &lt;a href=&quot;http://mansos.edi.lv/wp-content/uploads/2013/03/ewsn-seal_blockly_poster.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, J. Judvaitis, L. Selavo, &lt;em&gt;Poster Abstract: SEAL: An Easy-to-use Sensor Node Application Development System&lt;/em&gt;, 9th European Conference on Wireless Sensor Networks (EWSN 2012), Poster and Demo Proceedings, pp. 31-32, Trento, Italy, 2012.&lt;br/&gt;
+Poster abstract: &lt;a href=&quot;http://mansos.edi.lv/wp-content/uploads/2012/02/13_poster.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;br/&gt;
+Poster: &lt;a href=&quot;http://mansos.edi.lv/wp-content/uploads/2012/02/seal_ewsn_poster.jpg&quot;&gt;[JPG]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A. Elsts&lt;/strong&gt;, G. Strazdins, A. Vihrov, and L. Selavo, &lt;em&gt;Design and Implementation of MansOS: a Wireless Sensor Network Operating System,&lt;/em&gt; Scientific Papers, University of Latvia, Vol. 787, pp. 79-105, 2012. &lt;a href=&quot;http://mansos.edi.lv/wp-content/uploads/2012/11/mansos-lu-2012.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;G. Strazdins, &lt;strong&gt;A. Elsts&lt;/strong&gt;, and L. Selavo, &lt;em&gt;MansOS: easy to use, portable and resource efficient operating system for networked embedded devices&lt;/em&gt; (poster abstract). In Proceedings of the 8th ACM Conference on Embedded Networked Sensor Systems (SenSys’10), ACM, pp. 427-428, 2010. &lt;a href=&quot;http://strazdins.lv/papers/strazdins2010mansos.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;br/&gt;
+Poster: &lt;a href=&quot;http://mansos.edi.lv/wp-content/uploads/2012/11/MansOS_SenSys10_poster-v7-win.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;R. Zviedris, &lt;strong&gt;A. Elsts&lt;/strong&gt;, G. Strazdins, A. Mednis and L. Selavo, &lt;em&gt;LynxNet: Wild Animal Monitoring Using Sensor Networks&lt;/em&gt; (poster abstract). In Lecture Notes in Computer Science, 2010, Vol. 6511, Real-World Wireless Sensor Networks (REALWSN’10), Pages 170-173, 2010, Springer. &lt;a href=&quot;http://reinholds.zviedris.lv/wiki/_media/zviedris2010lynxnet.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;ph-d-thesis&quot;&gt;Ph.D. thesis&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;A Framework to Facilitate Wireless Sensor Network Application Development&lt;/em&gt;, 2013, University of Latvia. &lt;a href=&quot;http://www.researchgate.net/profile/Atis_Elsts/publication/259575286_A_Framework_to_Facilitate_Wireless_Sensor_Network_Application_Development/file/72e7e52cad3f610f0d.pdf&quot;&gt;[PDF]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Sun, 05 Apr 2015 16:25:06 +0200</pubDate>
+				<link>http://user.it.uu.se/~atiel485//~atiel485/2015/04/publications</link>
+				<guid isPermaLink="true">http://user.it.uu.se/~atiel485//~atiel485/2015/04/publications</guid>
+			</item>
+		
+			<item>
+				<title>Academic services</title>
+				<description>&lt;h1 id=&quot;teaching&quot;&gt;Teaching&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Guest lecturer, Wireless Networking and Sensing in e-Healthcare, University of Bristol, 2018&lt;/li&gt;
+&lt;li&gt;Substitute lecturer and teaching assistant, Linux System Programming, University of Latvia, 2011, 2012, and 2013&lt;/li&gt;
+&lt;li&gt;Guest lecturer, Wireless Sensor Networks, University of Latvia, 2011 and 2012&lt;/li&gt;
+&lt;li&gt;Teaching assistant, Sociotechnical Systems Engineering project course in IT (a project developing a smart city IS), Uppsala University, Spring 2015&lt;/li&gt;
+&lt;li&gt;Teaching assistant, Computer Networks III project course (a project developing bike parking detectors), Uppsala University, Spring 2015&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;supervision&quot;&gt;Supervision&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Undergraduate thesis supervision for 3 students on wireless sensor network topics.&lt;/li&gt;
+&lt;li&gt;Master thesis supervision for 2 students on wireless sensor network protocols (University of Bristol, Univeristy of Latvia)&lt;/li&gt;
+&lt;li&gt;Master thesis supervision for 1 student on using cryptocurrency protocols in IoT (Univresity of Bristol)&lt;/li&gt;
+&lt;li&gt;Master thesis review (i.e. de facto partial supervision in the Swedish system) for 2 students.&lt;/li&gt;
+&lt;li&gt;Internship supervision for multiple students at the University of Bristol and IECS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reviews-journals&quot;&gt;Reviews, journals&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;http://ieee-iotj.org/&quot;&gt;Internet of Things Journal&lt;/a&gt;, IEEE&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;https://www.journals.elsevier.com/computer-networks/&quot;&gt;Computer Networks&lt;/a&gt;, Elsevier&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;https://www.journals.elsevier.com/journal-of-network-and-computer-applications/&quot;&gt;Journal of Network and Computer Applications&lt;/a&gt;, Elsevier&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;http://www.springer.com/engineering/signals/journal/11036&quot;&gt;Mobile Networks and Applications&lt;/a&gt;, ACM Springer&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;https://www.springer.com/engineering/signals/journal/11276&quot;&gt;Wireless Networks&lt;/a&gt;, Springer&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;http://journals.sagepub.com/home/dsn&quot;&gt;International Journal of Distributed Sensor Networks&lt;/a&gt;, SAGE Journals&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;http://www.mdpi.com/journal/sensors&quot;&gt;Sensors&lt;/a&gt;, MPDI&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;http://www.mdpi.com/journal/applsci&quot;&gt;Applied Sciences&lt;/a&gt;, MPDI&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;http://www.mdpi.com/journal/jsan&quot;&gt;Journal of Sensor and Actuator Networks&lt;/a&gt;, MPDI&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;http://www.mdpi.com/journal/symmetry&quot;&gt;Symmetry&lt;/a&gt;, MPDI&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;http://link.springer.com/journal/11950&quot;&gt;Automatic Control and Computer Sciences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;https://www.iospress.nl/journal/journal-of-ambient-intelligence-and-smart-environments/&quot;&gt;Journal of Ambient Intelligence and Smart Environments&lt;/a&gt;, IOS Press&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also see &lt;a href=&quot;https://publons.com/author/1278425/atis-elsts#profile&quot;&gt;my Publons profile&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;reviews-conferences&quot;&gt;Reviews, conferences&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;TPC member, &lt;a href=&quot;http://dcoss.org/&quot;&gt;DCOSS 2018&lt;/a&gt; posters and demos&lt;/li&gt;
+&lt;li&gt;TPC member, &lt;a href=&quot;http://conferences.imt-atlantique.fr/adhocnow2018/&quot;&gt;AdHoc-Now 2018&lt;/a&gt;, 2019&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;http://wcnc2018.ieee-wcnc.org/&quot;&gt;IEEE WCNC 2018&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;https://2017.ieeeglobalsip.org/sym/17/SCIOT&quot;&gt;IEEE GlobalSIP 2017&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;http://www.ieeelcn.org/&quot;&gt;IEEE LCN 2015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;TPC member, &lt;a href=&quot;http://www.sncnw.se/&quot;&gt;SNCNW 2015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;https://en.wikipedia.org/wiki/International_Conference_on_Communications&quot;&gt;IEEE ICC&lt;/a&gt; &lt;a href=&quot;http://icc2015.ieee-icc.org/&quot;&gt;2015&lt;/a&gt;, &lt;a href=&quot;http://icc2016.ieee-icc.org/&quot;&gt;2016&lt;/a&gt;, &lt;a href=&quot;http://icc2017.ieee-icc.org/&quot;&gt;2017&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reviewer, &lt;a href=&quot;http://www.senseapp.org/&quot;&gt;IEEE SenseApp 2014&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;TPC member, &lt;a href=&quot;http://e2nets.org/&quot;&gt;E2Nets 2014&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;TPC member, &lt;a href=&quot;http://ecms2013.hials.no&quot;&gt;27th European Conference on Modelling and Simulation, 2013&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Sat, 04 Apr 2015 16:25:06 +0200</pubDate>
+				<link>http://user.it.uu.se/~atiel485//~atiel485/2015/04/services</link>
+				<guid isPermaLink="true">http://user.it.uu.se/~atiel485//~atiel485/2015/04/services</guid>
+			</item>
+		
+			<item>
+				<title>Contact information</title>
+				<description>&lt;ul&gt;
+&lt;li&gt;Bristol University&lt;/li&gt;
+&lt;li&gt;Department of Electrical and Electronic Engineering&lt;/li&gt;
+&lt;li&gt;Merchant Venturers&amp;#39; Building&lt;/li&gt;
+&lt;li&gt;Woodland Road&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;private-consulting&quot;&gt;Private consulting&lt;/h1&gt;
+
+&lt;p&gt;Available for consulting in Internet of Things, including: system implementatons in embedded C, low-power wireless protocols, consulting and code development using Contiki-NG.&lt;/p&gt;
+
+&lt;p&gt;Rate: 50 GPB per hour (negotiable).&lt;/p&gt;
+
+&lt;h1 id=&quot;email&quot;&gt;Email:&lt;/h1&gt;
+
+&lt;p&gt;atis.elsts at bristol dot ac dot uk, atis.elsts at gmail dot com&lt;/p&gt;
+</description>
+				<pubDate>Fri, 03 Apr 2015 16:25:06 +0200</pubDate>
+				<link>http://user.it.uu.se/~atiel485//~atiel485/2015/04/contact</link>
+				<guid isPermaLink="true">http://user.it.uu.se/~atiel485//~atiel485/2015/04/contact</guid>
+			</item>
+		
+	</channel>
+</rss>
